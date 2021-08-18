@@ -1,0 +1,23 @@
+ALGORITHM sentenceM
+VAR
+nbword: INTEGER := 0;
+nbv: INTEGER := 0;
+nbch: INTEGER := 0;
+
+charac :Char ;
+  
+BEGIN
+  REPEAT
+     Read( charac )
+     IF (charac==("a"OR"A"OR"e"OR"E"OR"u"OR"U"OR"i"OR"I"OR"o"OR"O"OR)) THEN
+  nbv := nbv+1 ;
+ELSE_IF (charac=="") THEN
+nbword := nbword + 1 ;
+ELSE
+   nbch:=nbch+1
+END_IF
+ UNTIL (charac=="."  )
+ Write("The length of the sentence:"  (nbch+ nbv))
+  Write("The number of words in the sentence:"  (nbword+1))
+   Write("The number of vowels in the sentence.:" nbv)
+END
